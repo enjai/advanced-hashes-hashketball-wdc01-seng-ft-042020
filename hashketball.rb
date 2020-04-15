@@ -131,11 +131,8 @@ end
 
 def num_points_scored(player_name)
   points = 0
-  #to keep and return it later 
   game_hash.each do |home_away, team_data| 
-    #iterating over the first layer
     team_data[:players].each do |stats| 
-      #iterating over the secondish layer 
      if stats[:player_name] == player_name 
         points = stats[:points]
       end 
